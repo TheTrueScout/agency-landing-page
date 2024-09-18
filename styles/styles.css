@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding-bottom: 500px;
   box-sizing: border-box;
 }
 
@@ -53,16 +53,255 @@ h2 {
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 28px;
   font-family: Roboto, sans-serif;
-  font-weight: var(--roboto-bold);
+  font-weight: var(--roboto-medium);
   color:  var(--text-primary);
-  line-height: 64px;
+  line-height: 36px;
   margin: 0;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  font-weight: var(--roboto-medium);
+  color:  var(--text-primary);
+  line-height: 36px;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  font-weight: var(--roboto-regular);
+  color:  var(--text-primary);
+  line-height: 24px;
+  margin: 0;
+}
+
+  /* Buttons */
+.button-default-flat-primary {
+  width: 205px;
+  height: 39px;
+  border-radius: 10px;
+  background-color: var(--primary-main);
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: var(--roboto-medium);
+  color: var(--paper-light);
+  border: none;
+}
+
+.button-default-secondary {
+  width: 205px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--paper-light);
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: var(--roboto-medium);
+  color: var(--secondary-main);
+  border: 2px solid;
+  border-color: var(--secondary-main);
 }
 
 .button-flat-secondary {
   width: 205px;
   height: 39px;
   border-radius: 10px;
+}
+
+  /* Header */
+header {
+  display: flex;
+  width: 100%;
+  padding: 2rem 6%;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+header .left {
+  display: flex;
+  width: 10%;
+  align-items: center;
+  gap: 7px;
+}
+
+header .middle {
+  width: 50%;
+  margin-right: 70px;
+}
+
+header > .middle > nav {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+  white-space: nowrap;
+}
+
+header > .middle > nav > a {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: var(--roboto-medium);
+  color: var(--text-secondary);
+  text-decoration: none;
+  position: relative;
+  transition: 0.4s;
+}
+
+header > .middle > nav > a:hover {
+  color: var(--primary-main);
+}
+
+header > .middle > nav > a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--primary-main);
+  transition: 0.4s;
+}
+
+header > .middle > nav > a:hover::after {
+  width: 100%;
+}
+
+header .right {
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+  align-items: center;
+}
+
+header > .right > a {
+  font-family: Roboto, sans-serif;
+  font-weight: var(--roboto-medium);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+header .right button {
+  width: 125px;
+}
+
+header .right img {
+  padding-left: 30px;
+  border-left: 2px solid #979797;
+}
+
+  /* Front Page Background */
+.front-page-bg-top {
+  position: absolute;
+  top: -95%;
+  right: -25%;
+  z-index: -1;
+}
+
+.front-page-bg-bottom {
+  position: absolute;
+  top: -80%;
+  right: -25%;
+  z-index: -2;
+}
+
+
+  /* Front Page */
+.front-page {
+  display: flex;
+  padding: 0 1% 0 6%;
+  align-items: center;
+  margin-top: 56px;
+  margin-bottom: 80px;
+  justify-content: space-between;
+}
+
+.front-page .left {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap:  24px;
+}
+
+.front-page > .left > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  /* front page footer */
+.front-page-footer {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 66px;
+}
+
+.front-page-footer div {
+  position: relative;
+}
+
+.front-page-footer .left, .front-page-footer .middle, .front-page-footer .right {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.front-page-footer .middle h2 {
+  position: relative;
+}
+
+.front-page-footer .middle h2::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 7px;
+  bottom: 0;
+  height: 60px;
+  width: 2px;
+  background-color: var(--accent-light);
+  align-items: center;
+}
+
+.front-page-footer .middle h2::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 7px;
+  bottom: 0;
+  height: 60px;
+  width: 2px;
+  background-color: var(--accent-light);
+  align-items: center;
+}
+
+.front-page-footer div::after {
+  content: '';
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: var(--primary-main);
+  transition: 0.5s;
+}
+
+.front-page-footer div:hover::after {
+  width: 100%;
+}
+
+.front-page-footer div h2 {
+  transition: 0.5s;
+}
+
+.front-page-footer div:hover  h2 {
+  color: var(--primary-main);
+}
+
+  /* about us */
+.about-us {
+  display: flex;
+  padding: 0 6% 0 5px;
 }
