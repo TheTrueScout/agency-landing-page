@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --paper-light: #FFFFFF;
+  --default-light: #FAFAFA;
+  --paper-dark: #424242;
+  --default-dark: #303030;
+
+  --primary-main: #2196F3;
+  --primary-light: #BBDEFB;
+  --primary-dark: #0D47A1;
+
+  --secondary-main: #00BCD4;
+  --secondary-light: #B2EBF2;
+  --secondary-dark: #006064;
+
+  --accent-main: #651FFF;
+  --accent-light: #EDE7F6;
+  --accent-dark: #4527A0;
+
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --text-secondary-dark-mode: rgba(255,255,255,0.7);
+  --text-disabled: rgba(0, 0, 0, 0.38);
+  --text-field: rgba(0, 0, 0, 0.42);
+
+  --roboto-regular: 400;
+  --roboto-medium: 500;
+  --roboto-bold: 700;
+  --roboto-condensed-bold: 700;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: Roboto, sans-serif;
+  font-weight: var(--roboto-bold);
+  color:  var(--text-primary);
+  line-height: 64px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: Roboto, sans-serif;
+  font-weight: var(--roboto-medium);
+  color:  var(--text-primary);
+  line-height: 42px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 48px;
+  font-family: Roboto, sans-serif;
+  font-weight: var(--roboto-bold);
+  color:  var(--text-primary);
+  line-height: 64px;
+  margin: 0;
+}
+
+.button-flat-secondary {
+  width: 205px;
+  height: 39px;
+  border-radius: 10px;
+}
